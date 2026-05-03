@@ -30,7 +30,7 @@ const PopulerProducts = () => {
         {products.slice(0, 3).map((g) => (
           <div
             key={g.id}
-            className="grid md:grid-cols-4 gap-6 items-center bg-gradient-to-br from-black via-gray-900 to-black rounded-2xl p-5 border border-white/10 shadow-lg hover:shadow-yellow-400/20 transition-all duration-500 group animate__animated animate__fadeInUp"
+            className="grid md:grid-cols-4 gap-6 items-center bg-gradient-to-br from-black via-gray-900 to-black rounded-2xl p-5 border border-white/10 shadow-md hover:shadow-yellow-400/30 hover:scale-[1.01] transition-all duration-500 group animate__animated animate__fadeInUp"
           >
 
             {/* 🖼️ IMAGE */}
@@ -42,13 +42,13 @@ const PopulerProducts = () => {
                 width={280}
                 height={200}
                 alt={g.name}
-                className="object-contain z-10 group-hover:scale-110 transition duration-500"
+                className="object-contain z-10 group-hover:scale-105 group-hover:-rotate-1 transition duration-500"
               />
             </div>
 
             {/* 📄 CONTENT */}
             <div className="md:col-span-2">
-              <h2 className="text-lg font-semibold group-hover:text-yellow-400 transition">
+              <h2 className="text-lg font-semibold group-hover:text-yellow-400 transition duration-300">
                 {g.name}
               </h2>
 
@@ -75,7 +75,7 @@ const PopulerProducts = () => {
               {/* buttons */}
               <div className="flex gap-3">
                 <Link href={`/products/${g.id}`} className="flex-1">
-                  <button className="w-full bg-yellow-400 text-black py-2 rounded-xl hover:bg-yellow-300 transition font-semibold">
+                  <button className="w-full bg-yellow-400 text-black py-2 rounded-xl hover:bg-yellow-300 transition duration-300 font-semibold hover:shadow-lg hover:shadow-yellow-400/30">
                     View Details
                   </button>
                 </Link>
@@ -85,7 +85,7 @@ const PopulerProducts = () => {
                     setSelectedProduct(g);
                     setQuantity(1);
                   }}
-                  className="border border-yellow-400 text-yellow-400 px-4 rounded-xl hover:bg-yellow-400 hover:text-black transition text-xl"
+                  className="border border-yellow-400 text-yellow-400 px-4 rounded-xl hover:bg-yellow-400 hover:text-black transition duration-300 text-xl hover:shadow-md hover:shadow-yellow-400/30"
                 >
                   <MdShoppingCart />
                 </button>
@@ -102,7 +102,7 @@ const PopulerProducts = () => {
                 {reviews.map((r, i) => (
                   <div
                     key={i}
-                    className="bg-black/50 p-3 rounded-lg hover:bg-black transition"
+                    className="bg-black/40 p-3 rounded-lg hover:bg-black/70 transition duration-300"
                   >
                     <div className="flex items-center gap-2 mb-1">
                       <div className="w-6 h-6 bg-yellow-400 text-black flex items-center justify-center rounded-full text-xs font-bold">
@@ -131,7 +131,7 @@ const PopulerProducts = () => {
       {selectedProduct && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 animate__animated animate__fadeIn">
 
-          <div className="bg-gray-900 text-white rounded-2xl p-6 w-[350px] shadow-2xl border border-yellow-400/30 animate__animated animate__zoomIn">
+          <div className="bg-gray-900 text-white rounded-2xl p-6 w-[350px] shadow-2xl border border-yellow-400/30 animate__animated animate__zoomIn hover:shadow-yellow-400/20">
 
             <h2 className="text-xl font-bold mb-2">
               {selectedProduct.name}
@@ -170,14 +170,14 @@ const PopulerProducts = () => {
                   console.log("Added to cart:", cartItem);
                   setSelectedProduct(null);
                 }}
-                className="bg-yellow-400 text-black px-4 py-2 rounded-lg w-full font-semibold hover:bg-yellow-300"
+                className="bg-yellow-400 text-black px-4 py-2 rounded-lg w-full font-semibold hover:bg-yellow-300 transition"
               >
                 Add to Cart
               </button>
 
               <button
                 onClick={() => setSelectedProduct(null)}
-                className="border border-gray-500 px-4 py-2 rounded-lg w-full"
+                className="border border-gray-500 px-4 py-2 rounded-lg w-full hover:bg-gray-800 transition"
               >
                 Cancel
               </button>
