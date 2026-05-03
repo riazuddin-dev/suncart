@@ -1,7 +1,7 @@
-import React from "react";
+import React, { cache } from "react";
 
  const getProductData = async () => {
-  const res = await fetch("http://localhost:3000/product.json");
+  const res = await fetch("https://suncart-psi.vercel.app/product.json", {cache:"no-cache"} );
   return res.json();
 };
 
