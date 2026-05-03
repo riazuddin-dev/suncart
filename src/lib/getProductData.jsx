@@ -1,4 +1,3 @@
-import React, { cache } from "react";
 
  const getProductData = async () => {
   const res = await fetch("https://suncart-psi.vercel.app/product.json", {cache:"no-cache"} );
