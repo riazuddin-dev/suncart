@@ -8,10 +8,10 @@ const Navbar = ({ href, children }) => {
 const pathName= usePathname()
 
 
-const activePage= href=== pathName
+const activePage= href == pathName
 
   return (
-    <Link href={href} className={`${activePage && "bg-amber-500"}`}>
+    <Link href={href} className={`${activePage && " bg-green-600"}`}>
       {children}
     </Link>
   );
