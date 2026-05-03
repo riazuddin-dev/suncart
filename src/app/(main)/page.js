@@ -2,7 +2,7 @@ import ExtraSection from "@/components/extraSection/ExtraSection";
 import Hero from "@/components/Hero/Hero";
 import PopulerProducts from "@/components/populerProducts/PopulerProducts";
 import getProductData from "@/lib/getProductData";
-
+// main page 
 
 export default async function Home() {
 const products = await getProductData()
