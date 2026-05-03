@@ -19,7 +19,7 @@ const PopulerProducts = ({products}) => {
   return (
     <section className="bg-black text-white py-16 px-4">
 
-      {/* 🔥 TITLE */}
+      {/* TITLE */}
       <h1 className="text-center text-5xl font-extrabold mb-12 animate__animated animate__fadeInDown">
         🔥 Popular <span className="text-yellow-400">Products</span>
       </h1>
@@ -32,7 +32,7 @@ const PopulerProducts = ({products}) => {
             className="grid md:grid-cols-4 gap-6 items-center bg-gradient-to-br from-black via-gray-900 to-black rounded-2xl p-5 border border-white/10 shadow-md hover:shadow-yellow-400/30 hover:scale-[1.01] transition-all duration-500 group animate__animated animate__fadeInUp"
           >
 
-            {/* 🖼️ IMAGE */}
+            {/*  IMAGE */}
             <div className="aspect-[4/3] flex items-center justify-center relative overflow-hidden rounded-xl">
               <div className="absolute w-32 h-32 bg-yellow-400/20 blur-3xl rounded-full"></div>
 
@@ -45,7 +45,7 @@ const PopulerProducts = ({products}) => {
               />
             </div>
 
-            {/* 📄 CONTENT */}
+            {/*  CONTENT */}
             <div className="md:col-span-2">
               <h2 className="text-lg font-semibold group-hover:text-yellow-400 transition duration-300">
                 {g.name}
@@ -53,7 +53,7 @@ const PopulerProducts = ({products}) => {
 
               <p className="text-sm text-gray-400 mb-1">{g.brand}</p>
 
-              {/* ⭐ rating */}
+              {/*  rating */}
               <div className="text-yellow-400 text-sm mb-2">
                 {"⭐".repeat(Math.round(g.rating))}
                 <span className="text-gray-500 ml-2 text-xs">
@@ -91,7 +91,7 @@ const PopulerProducts = ({products}) => {
               </div>
             </div>
 
-            {/* ⭐ REVIEWS */}
+            {/*  REVIEWS */}
             <div className="bg-white/5 backdrop-blur-md p-4 rounded-xl border border-white/10 h-52 overflow-y-auto">
               <h3 className="text-sm font-semibold mb-3 text-yellow-400">
                 ⭐ Reviews

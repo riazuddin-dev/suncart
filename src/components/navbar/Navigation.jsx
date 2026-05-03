@@ -42,7 +42,7 @@ const Navigation = () => {
             <Link href="/cart" className="relative">
               <FaShoppingCart />
               <span className="absolute -top-2 -right-2 bg-yellow-500 text-black text-xs px-1 rounded-full">
-                3
+                
               </span>
             </Link>
 
