@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import products from "../../data/products.json";
 import Link from "next/link";
 import Image from "next/image";
 import { MdShoppingCart } from "react-icons/md";
@@ -13,7 +12,7 @@ const reviews = [
   { name: "Nusrat", text: "Worth the price. Loved it!", rating: 5 },
 ];
 
-const PopulerProducts = () => {
+const PopulerProducts = ({products}) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
 

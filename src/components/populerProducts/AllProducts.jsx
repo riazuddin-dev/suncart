@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import React from "react";
-import products from "@/data/products.json";
+// import products from "@/data/products.json";
 
-const AllProducts = () => {
+const AllProducts = ({products}) => {
+
+
   return (
     <section className="w-full px-4 py-12 bg-black text-white">
 

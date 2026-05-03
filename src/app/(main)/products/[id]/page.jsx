@@ -1,11 +1,13 @@
-"use client";
 
-import { useParams } from "next/navigation";
-import products from "../../../../data/Product/Details.json";
+import getProductData from "@/lib/getProductData";
+// import products from "../../../../data/Product/Details.json";
 
-const DetailsPage = () => {
+const DetailsPage = async ({params}) => {
 
-  const { id } = useParams();
+
+const products= await getProductData()
+
+  const { id } = await params
   const item = products.find((f) => f.id == id);
 
   if (!item) {

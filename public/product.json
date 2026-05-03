@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Black Aviator Sunglasses",
+    "brand": "SunVibe",
+    "price": 24.99,
+    "rating": 4.8,
+    "stock": 45,
+    "description": "Timeless aviator style with UV400 protection and premium polarized lenses. Perfect for everyday summer wear.",
+    "image": "https://images.pexels.com/photos/32677205/pexels-photo-32677205.jpeg",
+    "category": "Sunglasses"
+  },
+  {
+    "id": 2,
+    "name": "Oversized Square Frame Sunglasses",
+    "brand": "SunVibe",
+    "price": 19.99,
+    "rating": 4.6,
+    "stock": 32,
+    "description": "Bold oversized square frames in trendy black. Offers excellent UV protection and a stylish modern look.",
+    "image": "https://images.pexels.com/photos/31259705/pexels-photo-31259705.jpeg",
+    "category": "Sunglasses"
+  },
+  {
+    "id": 3,
+    "name": "Brown Tortoiseshell Cat-Eye Sunglasses",
+    "brand": "SunVibe",
+    "price": 22.50,
+    "rating": 4.7,
+    "stock": 28,
+    "description": "Elegant cat-eye design with beautiful tortoiseshell pattern. Ideal for women who want a chic summer vibe.",
+    "image": "https://images.pexels.com/photos/29538699/pexels-photo-29538699.jpeg",
+    "category": "Sunglasses"
+  },
+  {
+    "id": 4,
+    "name": "Wayfarer Style Retro Sunglasses",
+    "brand": "SunVibe",
+    "price": 17.99,
+    "rating": 4.5,
+    "stock": 50,
+    "description": "Classic retro wayfarer sunglasses with strong UV protection. Great for beach days and casual outings.",
+    "image": "https://images.pexels.com/photos/32677241/pexels-photo-32677241.jpeg",
+    "category": "Sunglasses"
+  },
+  {
+    "id": 5,
+    "name": "Round Gold Frame Sunglasses",
+    "brand": "SunVibe",
+    "price": 21.99,
+    "rating": 4.9,
+    "stock": 19,
+    "description": "Trendy round gold metal frame with gradient lenses. Perfect for a fashionable summer look.",
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80",
+    "category": "Sunglasses"
+  },
+  {
+    "id": 6,
+    "name": "Sporty Polarized Shield Sunglasses",
+    "brand": "SunVibe",
+    "price": 29.99,
+    "rating": 4.8,
+    "stock": 37,
+    "description": "Modern wrap-around shield style with high-performance polarized lenses. Best for outdoor activities.",
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f",
+    "category": "Sunglasses"
+  },
+  {
+    "id": 7,
+    "name": "Transparent Oversized Sunglasses",
+    "brand": "SunVibe",
+    "price": 18.50,
+    "rating": 4.4,
+    "stock": 24,
+    "description": "Cool transparent frame oversized sunglasses. A fresh and trendy choice for summer 2026.",
+    "image": "https://images.pexels.com/photos/32677214/pexels-photo-32677214.jpeg",
+    "category": "Sunglasses"
+  },
+  {
+    "id": 8,
+    "name": "Butterfly Shape Fashion Sunglasses",
+    "brand": "SunVibe",
+    "price": 25.99,
+    "rating": 4.7,
+    "stock": 15,
+    "description": "Stylish butterfly-shaped frames with colored lenses. Makes a bold fashion statement this summer.",
+    "image": "https://images.pexels.com/photos/31259705/pexels-photo-31259705.jpeg",
+    "category": "Sunglasses"
+  }
+]
