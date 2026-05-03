@@ -1,7 +1,8 @@
 "use client";
+import ProfileUpdateModal from "@/components/ProfileUpdateModal";
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
-import { CgProfile } from "react-icons/cg";
+
 import {
   MdOutlineDriveFileRenameOutline,
   MdOutlineMailOutline,
@@ -80,11 +81,7 @@ const ProfilePage = () => {
 
         {/* Buttons */}
         <div className="flex flex-col gap-3">
-          <Link href="/profile/update">
-            <button className="w-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black py-2 rounded-xl font-semibold hover:scale-105 transition">
-              Update Profile
-            </button>
-          </Link>
+         <ProfileUpdateModal></ProfileUpdateModal>
 
           <button
             onClick={() => authClient.signOut()}

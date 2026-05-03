@@ -8,7 +8,7 @@ export default async function Home() {
 const products = await getProductData()
 
   return (
-    <div className="">
+    <div className="">    
       <h1>
        <Hero></Hero>
        <PopulerProducts products={products}></PopulerProducts>
