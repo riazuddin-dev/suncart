@@ -44,7 +44,7 @@ const Hero = () => {
               Limited summer drops — don’t miss out.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className=" relative flex flex-wrap gap-4">
               <Link href="/products">
                 <button className="bg-yellow-400 hover:bg-yellow-300 text-green-950 font-semibold px-8 py-4 rounded-2xl text-lg transition-all duration-300 hover:scale-105 shadow-lg">
                   Shop Summer Collection
@@ -61,10 +61,10 @@ const Hero = () => {
         </div>
 
         {/* Right Side - Floating Elements */}
-        <div className="relative z-10 hidden md:flex items-center justify-center pr-10">
-          <div className="relative">
+        <div className=" z-10 hidden md:flex items-center justify-center pr-10">
+          <div className="">
             {/* Floating Discount Card */}
-            <div className="absolute -top-6 -right-6 bg-white rounded-3xl p-6 shadow-2xl w-56 text-center transform rotate-6 hover:rotate-0 transition-transform duration-300">
+            <div className="absolute top-8 right-6 bg-white rounded-3xl p-6 shadow-2xl w-56 text-center transform rotate-6 hover:rotate-0 transition-transform duration-300">
               <p className="text-green-700 text-sm font-semibold">LIMITED TIME</p>
               <h3 className="text-5xl font-black text-red-600 leading-none my-1">50%</h3>
               <p className="text-gray-600 font-medium">OFF EVERYTHING</p>
@@ -72,9 +72,7 @@ const Hero = () => {
             </div>
 
             {/* Small Sunglasses Floating Accent (Optional) */}
-            <div className="absolute -bottom-8 left-12 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/30">
-              <p className="text-white text-xs text-center">✦ UV 400 Protection ✦</p>
-            </div>
+          
           </div>
         </div>
 
