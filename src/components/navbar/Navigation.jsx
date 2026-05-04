@@ -8,12 +8,19 @@ import { CiLogin } from "react-icons/ci";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./Navbar";
+import { toast } from "react-toastify";
 
 const Navigation = () => {
   const { data: session, isPending } = authClient.useSession();
   const user = session?.user;
 
   const [open, setOpen] = useState(false);
+
+  const HandelLogout=()=>{
+    authClient.signOut();
+    
+    toast.success("Logout successful 🎉")
+  }
 
   return (
     <nav className="bg-black text-white border-b border-gray-800 sticky top-0 z-50 shadow-lg">
@@ -68,7 +75,7 @@ const Navigation = () => {
                 </Link>
 
                 <button
-                  onClick={() => authClient.signOut()}
+                  onClick={() => HandelLogout()}
                   className="hover:text-red-400"
                 >
                   <CiLogin size={20} />

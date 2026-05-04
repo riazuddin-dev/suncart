@@ -7,20 +7,27 @@ import {
   MdOutlineDriveFileRenameOutline,
   MdOutlineMailOutline,
 } from "react-icons/md";
+import { toast } from "react-toastify";
 
 const ProfilePage = () => {
   const { data: session, isPending } = authClient.useSession();
-
+  
   if (isPending) {
     return <p className="text-center mt-10">Loading...</p>;
   }
-
+  
   const user = session?.user;
-
+  
   if (!user) {
     return <p className="text-center mt-10">Not logged in</p>;
   }
-
+  
+  
+  const HandelLogout= ()=>{
+  
+    authClient.signOut(); 
+    toast.success("Logout successful 🎉") 
+  }
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black text-white">
       <div className="w-full max-w-md p-6 rounded-3xl backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl">
@@ -84,7 +91,7 @@ const ProfilePage = () => {
          <ProfileUpdateModal></ProfileUpdateModal>
 
           <button
-            onClick={() => authClient.signOut()}
+            onClick={() =>HandelLogout()}
             className="w-full bg-red-500 py-2 rounded-xl font-semibold hover:bg-red-600 transition"
           >
             Logout
