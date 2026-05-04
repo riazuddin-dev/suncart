@@ -4,6 +4,8 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { authClient } from "../../../lib/auth-client";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
+
 
 const LoginPage = () => {
   const router = useRouter();
@@ -26,12 +28,13 @@ const LoginPage = () => {
 
       if (res?.data) {
         router.push("/");
+        toast.success("Login successful 🎉")
       } else {
-        alert("Login failed ❌");
+        toast.error("Login failed ❌");
       }
     } catch (error) {
       console.error(error);
-      alert("Something went wrong ❌");
+      toast.error("Something went wrong ❌");
     }
   };
 
@@ -43,11 +46,12 @@ const LoginPage = () => {
       });
 
       if (res?.data) {
+        toast.success("Login successful 🎉")
         router.push("/");
       }
     } catch (error) {
       console.error(error);
-      alert("Google login failed ❌");
+      toast.error("Google login failed ❌");
     }
   };
 

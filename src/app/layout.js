@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/navbar/Navigation";
+import ToastProvider from "@/components/ToastProvider";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +31,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+     <ToastProvider></ToastProvider>
+        {children}
+        </body>
     </html>
   );
 }

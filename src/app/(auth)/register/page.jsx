@@ -4,6 +4,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { authClient } from "../../../lib/auth-client";
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
 
 const RegisterPage = () => {
   const router = useRouter();
@@ -23,11 +24,12 @@ const RegisterPage = () => {
       });
 
       if (res?.data) {
+        toast.success("Google Login successful 🎉")
         router.push("/");
       }
     } catch (error) {
       console.error(error);
-      alert("Google login failed ❌");
+      toast.error("Google login failed ❌");
     }
   };
 
@@ -42,9 +44,10 @@ const RegisterPage = () => {
     });
 
     if (res?.data) {
+      toast.success("Login successful 🎉")
       router.push("/login");
     } else {
-      alert("Registration failed ❌");
+      toast.error("already you have a account ❌");
     }
 
     
