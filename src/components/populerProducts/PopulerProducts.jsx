@@ -166,7 +166,16 @@ const PopulerProducts = ({products}) => {
               <button
                 onClick={() => {
                   const cartItem = { ...selectedProduct, quantity };
-                  console.log("Added to cart:", cartItem);
+                  try {
+                    const existing = JSON.parse(
+                      localStorage.getItem("suncart_cart") || "[]"
+                    );
+                    const next = Array.isArray(existing) ? existing : [];
+                    next.push(cartItem);
+                    localStorage.setItem("suncart_cart", JSON.stringify(next));
+                  } catch {
+                    // ignore
+                  }
                   setSelectedProduct(null);
                 }}
                 className="bg-yellow-400 text-black px-4 py-2 rounded-lg w-full font-semibold hover:bg-yellow-300 transition"

@@ -1,54 +1,76 @@
-# 🕶️ SunCart - Premium Sunglasses Store
+# SunCart — Premium Sunglasses Store
 
-## 🌐 Live Site
-👉 https://suncart-47q20ggdu-riazuddin-devs-projects.vercel.app/
+Modern e-commerce storefront for premium sunglasses (Next.js + Better Auth).
 
----
+## Live site
 
-## 📌 Project Overview
-SunCart is a modern and stylish e-commerce web application for premium sunglasses.  
-It offers a smooth shopping experience with a clean UI, animations, and user authentication.
+- **Production:** https://suncart-psi.vercel.app  
+- GitHub: https://github.com/riazuddin-dev/suncart  
 
----
+## Overview
 
-## 🎯 Purpose
-The purpose of this project is to build a full-featured frontend e-commerce platform using Next.js, focusing on UI/UX, authentication, and modern web technologies.
+SunCart focuses on a polished shopping UI: product browsing, detail pages, cart modal with quantity, authentication, and profile management.
 
----
+## Features
 
-## ✨ Key Features
+- Browse all sunglasses products  
+- Product details page  
+- Add to cart (modal + quantity, saved in `localStorage`)  
+- Email + Google authentication (Better Auth)  
+- Profile management (update name & image)  
+- Toast notifications  
+- Responsive layout + product loading skeletons  
+- Protected routes via proxy/middleware  
 
-- 🛍️ Browse all sunglasses products
-- 🔍 Product details page
-- 🛒 Add to cart (with modal & quantity selection)
-- 👤 User authentication (login/register)
-- 🧑 Profile management (update name & image)
-- ⚡ Toast notifications for user feedback
-- 🎨 Modern UI with animations (Animate.css)
-- 📱 Fully responsive design
-- 🔐 Protected routes (middleware)
+## Tech stack
 
----
+- Next.js 16 (App Router)  
+- Tailwind CSS + DaisyUI  
+- Better Auth + MongoDB adapter  
+- React Hook Form  
+- React Toastify · Animate.css · React Icons  
 
-## 🧰 Technologies Used
+## Local setup
 
-- ⚛️ Next.js (App Router)
-- 🎨 Tailwind CSS
-- 🌼 DaisyUI
-- 🔥 React Hook Form
-- 🔐 Better Auth
-- 🎯 React Icons
-- 💬 React Toastify
-- 🎞️ Animate.css
+```powershell
+cd "D:\Assingmant\assinment-8\suncart"
+npm install
+```
 
----
+Create `.env` / `.env.local` with Better Auth + Mongo settings (see your existing env keys), then:
 
-## 📦 NPM Packages
+```powershell
+npm run dev
+```
 
-```bash
-react-hook-form
-react-toastify
-react-icons
-animate.css
-daisyui
-better-auth
+Open http://localhost:3000  
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Development server |
+| `npm run build` | Production build |
+| `npm start` | Start production server |
+| `npm run lint` | ESLint |
+
+## Main routes
+
+| Path | Purpose |
+|------|---------|
+| `/` | Home + popular products |
+| `/products` | All products |
+| `/products/[id]` | Product detail |
+| `/login`, `/register` | Auth |
+| `/profile` | Account (auth required) |
+
+## For reviewers
+
+1. Open `/products` (public)  
+2. Register or Login  
+3. Open product → Add to Cart  
+4. Visit `/profile` to update name/image  
+
+## Author
+
+riazuddin-dev  

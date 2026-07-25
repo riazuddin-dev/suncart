@@ -13,21 +13,41 @@ const ProfilePage = () => {
   const { data: session, isPending } = authClient.useSession();
   
   if (isPending) {
-    return <p className="text-center mt-10">Loading...</p>;
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-black text-white">
+        <div className="flex flex-col items-center gap-3">
+          <div className="h-10 w-10 animate-spin rounded-full border-2 border-yellow-400 border-t-transparent" />
+          <p className="text-sm text-gray-400">Loading profile…</p>
+        </div>
+      </div>
+    );
   }
   
   const user = session?.user;
   
   if (!user) {
-    return <p className="text-center mt-10">Not logged in</p>;
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-black text-white px-4">
+        <div className="max-w-sm text-center rounded-2xl border border-white/10 bg-white/5 p-8">
+          <p className="text-xl font-semibold">Not logged in</p>
+          <p className="mt-2 text-sm text-gray-400">
+            Sign in to view and update your SunCart profile.
+          </p>
+          <Link
+            href="/login"
+            className="mt-6 inline-flex rounded-xl bg-yellow-400 px-5 py-2.5 text-sm font-semibold text-black hover:bg-yellow-300 transition"
+          >
+            Go to Login
+          </Link>
+        </div>
+      </div>
+    );
   }
   
-  
-  const HandelLogout= ()=>{
-  
-    authClient.signOut(); 
-    toast.success("Logout successful 🎉") 
-  }
+  const HandelLogout = async () => {
+    await authClient.signOut();
+    toast.success("Logged out successfully");
+  };
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black text-white">
       <div className="w-full max-w-md p-6 rounded-3xl backdrop-blur-lg bg-white/10 border border-white/20 shadow-2xl">

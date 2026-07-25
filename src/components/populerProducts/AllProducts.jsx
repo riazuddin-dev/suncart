@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const AllProducts = ({ products }) => {
 
@@ -22,8 +23,16 @@ const AllProducts = ({ products }) => {
       </div>
 
       {/* Product Grid */}
+      {!products?.length ? (
+        <div className="mx-auto max-w-md rounded-2xl border border-white/10 bg-white/5 p-10 text-center">
+          <p className="text-xl font-semibold">No products found</p>
+          <p className="mt-2 text-sm text-gray-400">
+            Check back soon for new summer styles.
+          </p>
+        </div>
+      ) : null}
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {products.map((product, index) => (
+        {(products || []).map((product, index) => (
           <div
             key={product.id}
             className="relative bg-gray-900 rounded-2xl shadow-md hover:shadow-yellow-400/20 transition-all duration-500 overflow-hidden group border border-white/10"
@@ -135,7 +144,17 @@ const AllProducts = ({ products }) => {
                     quantity,
                   };
 
-                  console.log("Added:", cartItem);
+                  try {
+                    const existing = JSON.parse(
+                      localStorage.getItem("suncart_cart") || "[]"
+                    );
+                    const next = Array.isArray(existing) ? existing : [];
+                    next.push(cartItem);
+                    localStorage.setItem("suncart_cart", JSON.stringify(next));
+                    toast.success(`${cartItem.name} added to cart`);
+                  } catch {
+                    toast.error("Could not add to cart");
+                  }
 
                   setSelectedProduct(null);
                 }}
